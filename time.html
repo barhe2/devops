@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Time Display</title>
+
+<head>
+    <style>
+        body { background-color: #A9A9A9; /* Nordic Grey */ }
+        #text {
+            font-size: 20px;
+            height: 35px;
+            width: 200px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green */  
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+
+        button:hover {
+            background-color: #45a049; /* Darker green */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text Example</title>
+    <h1>Local Time Display Page</h1>
+</head>
+<body>
+
+<p id="text"></p>
+<button onclick="changeText()">Click Me!</button>
+
+<script>
+function changeText() {
+    const now = new Date();
+    const formattedTime = now.toLocaleTimeString();
+    const textElement = document.getElementById('text');
+    textElement.innerHTML = `Local Time: ${formattedTime}`;
+    textElement.style.backgroundColor = '#6050dc'; /* Majorelle Blue */
+}
+</script>
+
+</body>
+</html>
